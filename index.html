@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仙小主 | 品牌战略对齐会提案 (Kickoff)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Font Assignments */
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif SC', serif; }
+
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Chart Container Standards */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Max width constraint */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Base height */
+            max-height: 400px;
+        }
+
+        /* Custom Scrollbar for elegance */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fafaf9; }
+        ::-webkit-scrollbar-thumb { background: #e7e5e4; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d6d3d1; }
+        
+        /* Card Hover Effects */
+        .hover-card { transition: all 0.3s ease; }
+        .hover-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+    <!-- Chosen Palette: Eastern Petal (Stone, Rose, Bronze) -->
+    <!-- Application Structure Plan: 
+         1. Hero: Impactful Brand Intro.
+         2. DNA Section: Cards for core values to align vision.
+         3. Product: Visualizing the "Flower+Yeast+Oil" tech.
+         4. EPOCH-Y: Interactive accordion for methodology.
+         5. Financials: Charts for Budget & Commission Tiers (Critical for business alignment).
+         6. Execution: Roadmap & SOW table. 
+    -->
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-stone-50/90 backdrop-blur-md z-50 border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-rose-900 rounded-full flex items-center justify-center text-stone-50 serif font-bold">仙</div>
+                    <span class="text-xl font-bold serif text-rose-950">仙小主 <span class="text-xs font-sans text-stone-500 ml-1 tracking-widest">BRAND KICKOFF</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                    <a href="#dna" class="hover:text-rose-700 transition">品牌顶层</a>
+                    <a href="#product" class="hover:text-rose-700 transition">产品战略</a>
+                    <a href="#epoch" class="hover:text-rose-700 transition">运营系统</a>
+                    <a href="#finance" class="hover:text-rose-700 transition">财务目标</a>
+                    <a href="#collab" class="hover:text-rose-700 transition">合作模式</a>
+                </div>
+                <button onclick="window.print()" class="text-stone-400 hover:text-rose-700">
+                    <i class="fa-solid fa-print"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-semibold tracking-wide uppercase mb-6">
+                Project Code: Endgame
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-rose-950 mb-6 tracking-tight leading-tight">
+                以花养肤，<br class="md:hidden" />宠爱如初
+            </h1>
+            <p class="text-xl md:text-2xl text-stone-600 max-w-2xl mx-auto mb-10 serif italic">
+                “爱自己，是女性最美的修行。”
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#finance" class="px-8 py-3 bg-rose-900 text-white rounded-lg shadow-lg hover:bg-rose-800 transition flex items-center gap-2">
+                    <i class="fa-solid fa-chart-line"></i> 查看经营目标
+                </a>
+                <a href="#dna" class="px-8 py-3 bg-white text-rose-900 border border-stone-200 rounded-lg shadow-sm hover:bg-stone-50 transition">
+                    品牌战略全览
+                </a>
+            </div>
+            <div class="mt-12 text-sm text-stone-400">
+                联合出品：EPOCH-Y × 仙小主 &nbsp;|&nbsp; 负责人：吴小雷
+            </div>
+        </div>
+        <!-- Decorative Background Element -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-10 pointer-events-none">
+            <div class="w-[800px] h-[800px] bg-rose-300 rounded-full blur-[120px] absolute top-[-200px] left-1/4"></div>
+        </div>
+    </header>
+
+    <!-- 1. Brand DNA Section -->
+    <section id="dna" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-stone-800 mb-4">第一部分：品牌顶层设计 (Brand DNA)</h2>
+                <div class="w-16 h-1 bg-rose-900 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Origin -->
+                <div class="hover-card bg-stone-50 p-8 rounded-2xl border border-stone-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl text-rose-900">
+                        <i class="fa-solid fa-fan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-rose-950 mb-4">核心叙事</h3>
+                    <p class="text-stone-600 leading-relaxed mb-4">
+                        传承东方花养美学，将东方花养智慧凝于方寸之间。拒绝工业风，打造**“小主般”的仪式感**。
+                    </p>
+                    <div class="inline-block bg-rose-100 text-rose-900 px-3 py-1 rounded text-sm font-medium">新中式宫廷美学</div>
+                </div>
+
+                <!-- Card 2: Persona -->
+                <div class="hover-card bg-stone-50 p-8 rounded-2xl border border-stone-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl text-rose-900">
+                        <i class="fa-solid fa-user-tag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-rose-950 mb-4">目标人群 (16-35岁)</h3>
+                    <p class="text-stone-600 leading-relaxed mb-4">
+                        **情感驱动型消费者**。<br>
+                        她们厌倦单纯功效堆砌，追求颜值、故事与“身心疗愈”。
+                    </p>
+                    <div class="inline-block bg-stone-200 text-stone-700 px-3 py-1 rounded text-sm font-medium">Fan Beauty/敷尔佳 潜在受众</div>
+                </div>
+
+                <!-- Card 3: Star IP -->
+                <div class="hover-card bg-stone-50 p-8 rounded-2xl border border-stone-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition text-6xl text-rose-900">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-rose-950 mb-4">首席体验官 (CXO)</h3>
+                    <p class="text-stone-600 leading-relaxed mb-4">
+                        拒绝“挂名代言”。<br>
+                        定位：**“第一位挑剔的用户”**。<br>
+                        亲自试用 + Vlog真实露出 = 信任背书。
+                    </p>
+                    <div class="inline-block bg-amber-100 text-amber-900 px-3 py-1 rounded text-sm font-medium">明星即品牌</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Product Strategy -->
+    <section id="product" class="py-20 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-stone-800 mb-4">第二部分：产品战略 (Product Strategy)</h2>
+                <p class="text-stone-500">核心壁垒：独创花 + 酵 + 油三位护肤</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Tech Viz -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200">
+                    <h3 class="text-lg font-bold text-stone-800 mb-6 text-center">RTB 技术信任状</h3>
+                    <div class="relative h-64 flex items-center justify-center">
+                        <!-- Circle 1 -->
+                        <div class="absolute left-1/2 top-10 -translate-x-1/2 w-32 h-32 bg-rose-100 rounded-full flex flex-col items-center justify-center text-center p-2 z-10 border-4 border-white shadow-lg">
+                            <span class="text-2xl mb-1">🌸</span>
+                            <span class="text-xs font-bold text-rose-900">鲜花提取物</span>
+                        </div>
+                        <!-- Circle 2 -->
+                        <div class="absolute left-10 bottom-10 w-32 h-32 bg-amber-100 rounded-full flex flex-col items-center justify-center text-center p-2 z-10 border-4 border-white shadow-lg">
+                            <span class="text-2xl mb-1">💧</span>
+                            <span class="text-xs font-bold text-amber-900">多重发酵液</span>
+                        </div>
+                        <!-- Circle 3 -->
+                        <div class="absolute right-10 bottom-10 w-32 h-32 bg-stone-200 rounded-full flex flex-col items-center justify-center text-center p-2 z-10 border-4 border-white shadow-lg">
+                            <span class="text-2xl mb-1">🏺</span>
+                            <span class="text-xs font-bold text-stone-800">微乳化花油</span>
+                        </div>
+                        <!-- Center Connection -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-rose-900 rounded-full flex items-center justify-center z-20 shadow-xl">
+                            <i class="fa-solid fa-plus text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="text-center mt-6 text-sm text-stone-500">
+                        <i class="fa-solid fa-shield-halved text-rose-900 mr-2"></i> 同源大厂代工 (Fan Beauty/敷尔佳)
+                    </div>
+                </div>
+
+                <!-- Right: SKU Matrix -->
+                <div>
+                    <h3 class="text-lg font-bold text-stone-800 mb-6">产品矩阵 (SKU Matrix)</h3>
+                    <div class="space-y-4">
+                        <!-- Item -->
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border-l-4 border-rose-400">
+                            <div class="w-12 h-12 bg-rose-50 rounded-full flex items-center justify-center text-rose-600">
+                                <i class="fa-solid fa-fire"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">流量款 (引流)</h4>
+                                <p class="text-sm text-stone-500">9.9元/19.9元 体验装 (单片) - 直播间拉新</p>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border-l-4 border-rose-800">
+                            <div class="w-12 h-12 bg-rose-50 rounded-full flex items-center justify-center text-rose-600">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800">利润款 (主推)</h4>
+                                <p class="text-sm text-stone-500">周期护理礼盒 (如7天急救包) - 覆盖投放成本</p>
+                            </div>
+                        </div>
+                        <!-- Function Grid -->
+                        <div class="grid grid-cols-3 gap-2 mt-4">
+                            <div class="bg-stone-100 text-stone-600 text-xs py-2 text-center rounded">保湿</div>
+                            <div class="bg-stone-100 text-stone-600 text-xs py-2 text-center rounded">美白</div>
+                            <div class="bg-stone-100 text-stone-600 text-xs py-2 text-center rounded">抗衰老</div>
+                            <div class="bg-stone-100 text-stone-600 text-xs py-2 text-center rounded">水油平衡</div>
+                            <div class="bg-stone-100 text-stone-600 text-xs py-2 text-center rounded">舒缓</div>
+                            <div class="bg-stone-100 text-stone-600 text-xs py-2 text-center rounded">消肿</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. EPOCH-Y System -->
+    <section id="epoch" class="py-20 bg-rose-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/3">
+                    <h2 class="text-3xl font-bold mb-6 serif">EPOCH-Y<br>智能运营系统</h2>
+                    <p class="text-rose-200 mb-8 text-lg">
+                        我们不把代运营看作简单的“卖货”，而是为品牌建立一个**自我进化的商业系统**。
+                    </p>
+                    <div class="p-6 bg-white/10 rounded-xl border border-white/10">
+                        <h4 class="font-bold mb-2 text-rose-100">流量打法: 1+N+X</h4>
+                        <ul class="space-y-3 text-sm text-rose-200">
+                            <li class="flex items-start gap-2"><span class="bg-white text-rose-900 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0">1</span> 明星本人：剧组Vlog & 开箱挑战 (源点)</li>
+                            <li class="flex items-start gap-2"><span class="bg-white/50 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0">N</span> 垂类KOL：深度评测成分 (口碑)</li>
+                            <li class="flex items-start gap-2"><span class="bg-white/20 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0">X</span> KOC蚂蚁雄兵：铺量占领搜索 (氛围)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-2/3 space-y-4">
+                    <!-- Interactive Accordion Items -->
+                    <div class="bg-white/5 border border-white/10 rounded-lg p-4 cursor-pointer hover:bg-white/10 transition" onclick="toggleEpoch('e-content')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-rose-100">E - Environment (环境洞察)</h3>
+                            <i class="fa-solid fa-chevron-down text-rose-300"></i>
+                        </div>
+                        <div id="e-content" class="hidden mt-3 text-rose-200 text-sm">洞察“东方美学复兴”与“女性悦己”的大趋势，顺势而为。</div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-lg p-4 cursor-pointer hover:bg-white/10 transition" onclick="toggleEpoch('p-content')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-rose-100">P - Persona (人格绑定)</h3>
+                            <i class="fa-solid fa-chevron-down text-rose-300"></i>
+                        </div>
+                        <div id="p-content" class="hidden mt-3 text-rose-200 text-sm">明星人设与品牌人格的深度绑定（明星即品牌，品牌即明星）。</div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-lg p-4 cursor-pointer hover:bg-white/10 transition" onclick="toggleEpoch('o-content')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-rose-100">O - Operating System (双轮驱动)</h3>
+                            <i class="fa-solid fa-chevron-down text-rose-300"></i>
+                        </div>
+                        <div id="o-content" class="hidden mt-3 text-rose-200 text-sm">内容飞轮 + 渠道飞轮双驱动。让流量转化为存量。</div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-lg p-4 cursor-pointer hover:bg-white/10 transition" onclick="toggleEpoch('c-content')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-rose-100">C - Capital (资本杠杆)</h3>
+                            <i class="fa-solid fa-chevron-down text-rose-300"></i>
+                        </div>
+                        <div id="c-content" class="hidden mt-3 text-rose-200 text-sm">投放、资源与明星影响力的协同杠杆，配合明星势能实现高ROI。</div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-lg p-4 cursor-pointer hover:bg-white/10 transition" onclick="toggleEpoch('h-content')">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-rose-100">H - Habitual Experiments (快速试错)</h3>
+                            <i class="fa-solid fa-chevron-down text-rose-300"></i>
+                        </div>
+                        <div id="h-content" class="hidden mt-3 text-rose-200 text-sm">赛马机制，快速测试素材与人群包，不恋战，只投产出比高的模型。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Financial Goals -->
+    <section id="finance" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-800 mb-2">第四部分：经营目标 (Business Goals)</h2>
+                <div class="flex justify-center gap-8 mt-6">
+                    <div class="text-center">
+                        <div class="text-sm text-stone-500 uppercase tracking-wide">首年GMV目标</div>
+                        <div class="text-4xl font-bold text-rose-900 serif">2,000万</div>
+                    </div>
+                    <div class="text-center border-l border-stone-200 pl-8">
+                        <div class="text-sm text-stone-500 uppercase tracking-wide">总预算投入</div>
+                        <div class="text-4xl font-bold text-stone-700 serif">500万</div>
+                    </div>
+                    <div class="text-center border-l border-stone-200 pl-8 hidden md:block">
+                        <div class="text-sm text-stone-500 uppercase tracking-wide">预估ROI</div>
+                        <div class="text-4xl font-bold text-stone-700 serif">1:4</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mt-12">
+                <!-- Budget Chart -->
+                <div class="bg-stone-50 p-6 rounded-2xl">
+                    <h3 class="text-center font-bold text-stone-700 mb-4">500万 预算分配 (Budget Allocation)</h3>
+                    <!-- Chart Container -->
+                    <div class="chart-container" style="height:300px;">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center text-xs text-stone-500">
+                        *弹性机制：若ROI达成预期，立即启动追加预算流程。
+                    </div>
+                </div>
+
+                <!-- Milestones -->
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-left font-bold text-stone-700 mb-6 pl-4 border-l-4 border-rose-900">阶段性里程碑 (Milestones)</h3>
+                    <div class="space-y-8 relative pl-4">
+                        <!-- Vertical Line -->
+                        <div class="absolute left-6 top-2 bottom-2 w-0.5 bg-stone-200 z-0"></div>
+
+                        <!-- Step 1 -->
+                        <div class="relative z-10 pl-8">
+                            <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-rose-200 border-2 border-rose-900 -translate-x-1/2"></div>
+                            <h4 class="font-bold text-stone-800">0-1 认知期 (1-3月)</h4>
+                            <p class="text-sm text-rose-700 font-semibold mb-1">目标: GMV 200W</p>
+                            <p class="text-sm text-stone-500">跑通“花酵油”转化模型；明星首播；小红书铺设。</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative z-10 pl-8">
+                            <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-rose-400 border-2 border-rose-900 -translate-x-1/2"></div>
+                            <h4 class="font-bold text-stone-800">1-10 爆发期 (4-9月)</h4>
+                            <p class="text-sm text-rose-700 font-semibold mb-1">目标: 单月GMV 300W+</p>
+                            <p class="text-sm text-stone-500">达人矩阵放量；大促节点（618/双11）冲刺。</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative z-10 pl-8">
+                            <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-rose-600 border-2 border-rose-900 -translate-x-1/2"></div>
+                            <h4 class="font-bold text-stone-800">品牌沉淀期 (10-12月)</h4>
+                            <p class="text-sm text-rose-700 font-semibold mb-1">目标: 复购率 ≥ 20%</p>
+                            <p class="text-sm text-stone-500">建立私域社群；拓展天猫旗舰店。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Business Model & Commission -->
+    <section id="collab" class="py-20 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-stone-800 mb-4">第五部分：合作模式 (Win-Win)</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">
+                    采用 **“基础服务费 + GMV增量分润”** 模式。激励团队不断挑战高目标。
+                </p>
+            </div>
+
+            <!-- Commission Chart -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 max-w-4xl mx-auto mb-12">
+                <h3 class="text-center font-bold text-stone-700 mb-6">阶梯分润激励机制 (Commission Tiers)</h3>
+                <div class="chart-container">
+                    <canvas id="commissionChart"></canvas>
+                </div>
+                <div class="mt-6 flex justify-center gap-6 text-sm">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-stone-300 rounded-sm"></div>
+                        <span>起步 (&lt;100W)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-rose-300 rounded-sm"></div>
+                        <span>成长 (100-300W)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-rose-500 rounded-sm"></div>
+                        <span>爆发 (>300W)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-rose-700 rounded-sm"></div>
+                        <span>对赌 (>120%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合作取费模型 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 max-w-4xl mx-auto mb-12">
+                <h3 class="text-center font-bold text-stone-700 mb-6">合作取费模型 (Pricing Model)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="bg-stone-50 text-stone-600 uppercase tracking-wider">
+                                <th class="px-6 py-3 font-medium">费用模块</th>
+                                <th class="px-6 py-3 font-medium">结算方式</th>
+                                <th class="px-6 py-3 font-medium">说明</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-100">
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-stone-900">基础服务费</td>
+                                <td class="px-6 py-4 text-stone-600">固定费用 (按季预付)</td>
+                                <td class="px-6 py-4 text-stone-800 bg-stone-50/50">覆盖核心运营团队（项目经理/内容/直播）的基础人力成本</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-stone-900">销售佣金</td>
+                                <td class="px-6 py-4 text-stone-600">按月GMV阶梯结算</td>
+                                <td class="px-6 py-4 text-stone-800 bg-stone-50/50">设定8% - 15%的阶梯佣金，业绩越高，比例越高</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-stone-900">投放资金</td>
+                                <td class="px-6 py-4 text-stone-600">品牌方独立承担</td>
+                                <td class="px-6 py-4 text-stone-800 bg-stone-50/50">双方共同设定ROI阈值（如1:2.5），数据透明，按实结算</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Roles Table -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-stone-200 max-w-4xl mx-auto">
+                <div class="px-6 py-4 bg-rose-50 border-b border-rose-100 flex justify-between items-center">
+                    <h3 class="font-bold text-rose-900">职责划分 (SOW)</h3>
+                    <span class="text-xs text-rose-800 bg-rose-200 px-2 py-1 rounded">明确边界</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="bg-stone-50 text-stone-600 uppercase tracking-wider">
+                                <th class="px-6 py-3 font-medium">模块</th>
+                                <th class="px-6 py-3 font-medium text-rose-700">EPOCH-Y (代运营)</th>
+                                <th class="px-6 py-3 font-medium text-stone-800">仙小主 (品牌方)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-100">
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-stone-900">品牌决策</td>
+                                <td class="px-6 py-4 text-stone-600">视觉提案、Slogan、故事包</td>
+                                <td class="px-6 py-4 text-stone-800 bg-stone-50/50 font-medium">最终拍板，把控调性</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-stone-900">内容生产</td>
+                                <td class="px-6 py-4 text-stone-600">脚本策划、剪辑制作、日更</td>
+                                <td class="px-6 py-4 text-stone-800 bg-stone-50/50 font-medium">明星出镜拍摄、提供素材</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-stone-900">直播运营</td>
+                                <td class="px-6 py-4 text-stone-600">搭建直播间、主播、场控</td>
+                                <td class="px-6 py-4 text-stone-800 bg-stone-50/50 font-medium">明星空降 (Big Day)</td>
+                            </tr>
+                             <tr>
+                                <td class="px-6 py-4 font-medium text-stone-900">商务对接</td>
+                                <td class="px-6 py-4 text-stone-600">达人BD、筛选、ROI核算</td>
+                                <td class="px-6 py-4 text-stone-800 bg-stone-50/50 font-medium">撬动艺人好友资源</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rose-950 text-rose-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold serif mb-2">仙小主 | Endgame</h2>
+                    <p class="text-rose-300 text-sm">
+                        “不只是另一个网红品牌，而是东方美学与现代科技的完美相遇。”
+                    </p>
+                </div>
+                <div class="md:text-right">
+                    <h3 class="font-bold mb-2">Next Steps:</h3>
+                    <ul class="text-sm space-y-1 text-rose-300">
+                        <li>1. 确认500万预算到账节点</li>
+                        <li>2. 敲定明星首场拍摄档期</li>
+                        <li>3. 启动产品视觉升级</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-rose-900 mt-8 pt-8 text-center text-xs text-rose-500">
+                &copy; 2025 EPOCH-Y Strategy Team. Generated for Internal Kickoff.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle Accordion
+        function toggleEpoch(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        // Initialize Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Budget Chart (Doughnut)
+            const ctxBudget = document.getElementById('budgetChart').getContext('2d');
+            new Chart(ctxBudget, {
+                type: 'doughnut',
+                data: {
+                    labels: ['营销推广 (流量/达人)', '产品成本 (备货/物流)', '团队与内容 (人力)'],
+                    datasets: [{
+                        data: [50, 30, 20], // %
+                        backgroundColor: ['#e11d48', '#fb7185', '#fda4af'], // Rose palette
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { padding: 20, usePointStyle: true } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const value = context.raw;
+                                    const amount = (value / 100) * 500; // Calc based on 500W total
+                                    return ` ${value}%: ${amount}万`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 2. Commission Chart (Bar)
+            const ctxComm = document.getElementById('commissionChart').getContext('2d');
+            new Chart(ctxComm, {
+                type: 'bar',
+                data: {
+                    labels: ['起步 (<100W)', '成长 (100-300W)', '爆发 (>300W)', '对赌 (>120%)'],
+                    datasets: [{
+                        label: '分润比例 (Commission %)',
+                        data: [8, 10, 12, 15],
+                        backgroundColor: ['#d6d3d1', '#fda4af', '#f43f5e', '#be123c'],
+                        borderRadius: 6,
+                        barThickness: 40
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 20,
+                            grid: { display: true, borderDash: [5, 5] },
+                            ticks: { callback: function(value){return value + "%"} }
+                        },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) { return ` 佣金比例: ${context.raw}%`; }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <!-- Visualization & Content Choices:
+         - Brand DNA: Cards for clear, digestible vision alignment.
+         - Product: HTML/CSS custom visualization for the "Tri-force" tech to allow responsiveness without SVG.
+         - EPOCH-Y: Accordion list to keep the UI clean while providing depth on click.
+         - Financials: Doughnut chart for simple budget breakdown; Bar chart for Commission to visually incentivize the higher tiers.
+         - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. Charts via Chart.js Canvas. 
+    -->
+</body>
+</html>
